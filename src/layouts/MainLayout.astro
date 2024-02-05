@@ -1,6 +1,8 @@
 ---
 import NavBar from '../components/NavBar.astro';
 import Footer from "../components/Footer.astro"
+import Reviews from "../components/Reviews.astro"
+import ContactForm from "../components/ContactForm.astro"
 
 interface Props {
 	title: string;
@@ -26,15 +28,17 @@ const { title } = Astro.props;
 	<body>
         <NavBar />
 		<slot />
+        <Reviews />
+        <ContactForm />
         <Footer />
 	</body>
 </html>
 <style is:global>
 :root {
-    --primary: #0047fb;
+    --primary: #3a5a40;
     --primaryLight: #007CFB;
-    --secondary: #ffba43;
-    --secondaryLight: #ffba43;
+    --secondary: #EDA708;
+    --secondaryLight: #EDA708;
     --headerColor: #1a1a1a;
     --bodyTextColor: #4e4b66;
     --bodyTextColorWhite: #fafbfc;
