@@ -1,0 +1,256 @@
+---
+const { topper, headerTitle, headerText, title1, title2, title3, text1, text2, text3} = Astro.props
+---
+
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="interior-services">
+    <div class="cs-container">
+        <!-- Left Content Section-->
+        <div class="cs-content">
+            <span class="cs-topper">{topper}</span>
+            <h2 class="cs-title">{headerTitle}</h2>
+            <p class="cs-text">
+                {headerText}
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/trees-white.svg" alt="hair cut" width="40" height="40">
+                </picture>
+                <h3 class="cs-h3">{title1}</h3>
+                <p class="cs-item-text">
+                    {text1}
+                </p>
+                <!-- <a href="" class="cs-link">Czytaj dalej</a> -->
+            </li>
+            <li class="cs-item">
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/trees-white.svg" alt="hair cut" width="40" height="40">
+                </picture>
+                <h3 class="cs-h3">{title2}</h3>
+                <p class="cs-item-text">
+                    {text2}
+                </p>
+                <!-- <a href="" class="cs-link">Czytaj dalej</a> -->
+            </li>
+            <li class="cs-item">
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/trees-white.svg" alt="hair cut" width="40" height="40">
+                </picture>
+                <h3 class="cs-h3">{title3}</h3>
+                <p class="cs-item-text">
+                    {text3}
+                </p>
+                <!-- <a href="" class="cs-link">Czytaj dalej</a> -->
+            </li>
+        </ul>
+    </div>
+    <!--Waves Background-->
+    <picture class="cs-waves">
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/waves-m.svg">
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/waves.svg">
+        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/waves.svg" alt="waves graphic" width="1920" height="331" aria-hidden="true">
+    </picture>
+</section>
+                                
+<style>
+    /*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #interior-services {
+        padding: var(--sectionPadding);
+        position: relative;
+        z-index: 1;
+    }
+    #interior-services .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: 34.375rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+    }
+    #interior-services .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        max-width: 50rem;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+    }
+
+    #interior-services .cs-title,
+    #interior-services .cs-text {
+        max-width: 100%;
+    }
+    #interior-services .cs-card-group {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* 16px - 20px */
+        gap: clamp(1rem, 2vw, 1.25rem);
+    }
+    #interior-services .cs-item {
+        width: 100%;
+        text-align: center;
+        list-style: none;
+        /* margin top value to match the negative margin value of the .cs-icon-wrapper */
+        margin: 2.75rem 0 0 0;
+        /* 24px - 64px bottom */
+        /* 24px - 40px left & right */
+        padding: 0 clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 6vw, 4rem);
+        background-color: #f7f3ee;
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        grid-column: span 12;
+        grid-row: span 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+    }
+    #interior-services .cs-item:hover .cs-h3 {
+        color: var(--bodyTextColorWhite);
+    }
+    #interior-services .cs-item:hover .cs-item-text {
+        color: var(--bodyTextColorWhite);
+        opacity: 0.9;
+    }
+    #interior-services .cs-item:hover .cs-background {
+        opacity: 1;
+    }
+    #interior-services .cs-icon-wrapper {
+        width: 5.5rem;
+        height: 5.5rem;
+        margin: -2.75rem 0 2.25rem 0;
+        background-color: var(--primary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #interior-services .cs-icon {
+        width: 2.5rem;
+        height: auto;
+    }
+    #interior-services .cs-h3 {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+        line-height: 1.2em;
+        font-weight: bold;
+        margin: 0 0 0.75rem 0;
+        color: var(--headerColor);
+    }
+    #interior-services .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        max-width: 18.75rem;
+        margin: 0 0 2rem 0;
+        padding: 0;
+        color: var(--bodyTextColor);
+    }
+    #interior-services .cs-link {
+        text-decoration: none;
+        font-size: 0.8rem;
+        line-height: 1.2em;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+        color: var(--primary);
+        position: relative;
+        transition: color 0.3s;
+    }
+    #interior-services .cs-link:hover {
+        color: #fff;
+    }
+    #interior-services .cs-link:before {
+        /* underline */
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: currentColor;
+        opacity: 1;
+        position: absolute;
+        display: block;
+        bottom: 0rem;
+        left: 0;
+    }
+    #interior-services .cs-background {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: opacity 0.3s;
+    }
+    #interior-services .cs-background:before {
+        /* background color overlay */
+        content: "";
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 100%;
+        background: #1a1a1a;
+        opacity: 0.84;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    #interior-services .cs-background img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        /* Makes img tag act as a background image */
+        object-fit: cover;
+    }
+    #interior-services .cs-waves {
+        width: 100%;
+        height: 13.875rem;
+        background-color: var(--primary);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+    #interior-services .cs-waves img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #interior-services .cs-container {
+        max-width: 80rem;
+    }
+    #interior-services .cs-item {
+        grid-column: span 4;
+    }
+}
+
+                                
+</style>
