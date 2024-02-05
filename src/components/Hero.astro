@@ -3,7 +3,7 @@
 <!--                    Hero                      -->
 <!-- ============================================ -->
 
-<section id="hero-1298">
+<section id="hero">
     <div class="cs-container">
         <div class="cs-content">
             <span class="cs-topper">Rozlicz się z nami</span>
@@ -64,13 +64,13 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #hero-1298 {
+    #hero {
         /* 150px - 350px */
         padding: clamp(9rem, 30.95vw, 21.875rem) 1rem;
         padding-bottom: 0;
         position: relative;
     }
-    #hero-1298 .cs-container {
+    #hero .cs-container {
         width: 100%;
         max-width: 80rem;
         margin: auto;
@@ -82,7 +82,7 @@
         /* 48px - 64px */
         gap: clamp(3rem, 7vw, 4rem);
     }
-    #hero-1298 .cs-content {
+    #hero .cs-content {
         /* set text align to left if content needs to be left aligned */
         text-align: center;
         width: 100%;
@@ -94,7 +94,7 @@
         position: relative;
         z-index: 10;
     }
-    #hero-1298 .cs-topper {
+    #hero .cs-topper {
         font-size: var(--topperFontSize);
         line-height: 1.2em;
         text-transform: uppercase;
@@ -105,7 +105,7 @@
         margin-bottom: 0.25rem;
         display: block;
     }
-    #hero-1298 .cs-title {
+    #hero .cs-title {
         /* 39px - 61px */
         font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
         font-weight: 900;
@@ -116,7 +116,7 @@
         color: var(--headerColor);
         position: relative;
     }
-    #hero-1298 .cs-text {
+    #hero .cs-text {
         /* 16px - 20px */
         font-size: clamp(1rem, 2.5vw, 1.25rem);
         line-height: 1.5em;
@@ -126,7 +126,7 @@
         margin: 0 0 clamp(1.75rem, 4vw, 2.5rem);
         color: var(--bodyTextColor);
     }
-    #hero-1298 .cs-picture {
+    #hero .cs-picture {
         width: 100%;
         /* 427px - 468px */
         max-width: clamp(26.6875rem, 50vw, 29.25rem);
@@ -136,11 +136,11 @@
         position: relative;
         z-index: 7;
     }
-    #hero-1298 .cs-picture img {
+    #hero .cs-picture img {
         width: 100%;
         height: auto;
     }
-    #hero-1298 .cs-floater {
+    #hero .cs-floater {
         width: 68.125rem;
         height: auto;
         opacity: 0.1;
@@ -150,7 +150,7 @@
         top: 4%;
         z-index: 1;
     }
-    #hero-1298 .cs-card-group {
+    #hero .cs-card-group {
         width: 100%;
         max-width: 80rem;
         /* changes to -550px at tablet */
@@ -165,7 +165,7 @@
         position: relative;
         z-index: 15;
     }
-    #hero-1298 .cs-item {
+    #hero .cs-item {
         text-align: left;
         list-style: none;
         width: 100%;
@@ -176,10 +176,10 @@
             background-color 0.3s,
             border-color 0.3s;
     }
-    #hero-1298 .cs-item:last-of-type {
+    #hero .cs-item:last-of-type {
         border-bottom: none;
     }
-    #hero-1298 .cs-link {
+    #hero .cs-link {
         text-decoration: none;
         /* 24px - 60px top & Bottom */
         /* 24px - 16px top & Bottom */
@@ -189,13 +189,13 @@
         align-items: flex-start;
         flex-direction: column;
     }
-    #hero-1298 .cs-icon {
+    #hero .cs-icon {
         /* 32px - 40px */
         height: clamp(2rem, 4vw, 2.5rem);
         width: auto;
         margin: 0 0 1rem 0;
     }
-    #hero-1298 .cs-h3 {
+    #hero .cs-h3 {
         /* 20px - 25px */
         font-size: clamp(1.25rem, 2vw, 1.5625rem);
         font-weight: 700;
@@ -205,7 +205,7 @@
         color: var(--headerColor);
         transition: color 0.3s;
     }
-    #hero-1298 .cs-item-text {
+    #hero .cs-item-text {
         /* 14px - 16px */
         font-size: clamp(0.875rem, 1.5vw, 1rem);
         text-align: inherit;
@@ -216,7 +216,7 @@
             color 0.3s,
             opacity 0.3s;
     }
-    #hero-1298 .cs-background {
+    #hero .cs-background {
         width: 100%;
         height: 100%;
         display: block;
@@ -225,7 +225,7 @@
         left: 0;
         z-index: -1;
     }
-    #hero-1298 .cs-background:before {
+    #hero .cs-background:before {
         /* background color overlay */
         content: "";
         position: absolute;
@@ -238,7 +238,7 @@
         left: 0;
         z-index: 1;
     }
-    #hero-1298 .cs-background img {
+    #hero .cs-background img {
         position: absolute;
         top: 0;
         left: 0;
@@ -250,7 +250,7 @@
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-    #hero-1298 {
+    #hero {
         padding-bottom: 9.375rem;
         display: flex;
         flex-direction: column;
@@ -258,41 +258,41 @@
         justify-content: center;
         gap: 5.625rem;
     }
-    #hero-1298 .cs-container {
+    #hero .cs-container {
         justify-content: flex-start;
         flex-direction: row;
     }
-    #hero-1298 .cs-content {
+    #hero .cs-content {
         text-align: left;
         width: 60%;
         align-items: flex-start;
     }
-    #hero-1298 .cs-picture {
+    #hero .cs-picture {
         width: 43%;
         position: absolute;
         bottom: -9.4375rem;
         right: 0rem;
     }
-    #hero-1298 .cs-floater {
+    #hero .cs-floater {
         display: block;
     }
-    #hero-1298 .cs-card-group {
+    #hero .cs-card-group {
         margin: 0 0 -21.875rem 0;
         padding: 0;
     }
-    #hero-1298 .cs-item {
+    #hero .cs-item {
         grid-column: span 4;
         border-bottom: none;
         border-right: 1px solid #e8e8e8;
     }
-    #hero-1298 .cs-item:nth-of-type(3) {
+    #hero .cs-item:nth-of-type(3) {
         border-bottom: none;
         border-right: none;
     }
-    #hero-1298 .cs-background {
+    #hero .cs-background {
         overflow: hidden;
     }
-    #hero-1298 .cs-background:before {
+    #hero .cs-background:before {
         opacity: 1;
         background: linear-gradient(
             89deg,
@@ -303,18 +303,18 @@
 }
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-    #hero-1298 .cs-item:hover {
+    #hero .cs-item:hover {
         background-color: #1a1a1a;
         border-color: #1a1a1a;
     }
-    #hero-1298 .cs-item:hover .cs-h3,
-    #hero-1298 .cs-item:hover .cs-item-text {
+    #hero .cs-item:hover .cs-h3,
+    #hero .cs-item:hover .cs-item-text {
         color: var(--bodyTextColorWhite);
     }
-    #hero-1298 .cs-item:hover .cs-item-text {
+    #hero .cs-item:hover .cs-item-text {
         opacity: 0.8;
     }
-    #hero-1298 .cs-floater {
+    #hero .cs-floater {
         right: clamp(45%, 50vw, 55%);
         top: auto;
         bottom: 0;
@@ -322,14 +322,14 @@
 }
 /* Large Desktop - 1600px (Parallax Effect) */
 @media only screen and (min-width: 100rem) {
-    #hero-1298 .cs-background {
+    #hero .cs-background {
         background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/buildings.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         background-attachment: fixed;
     }
-    #hero-1298 .cs-background img {
+    #hero .cs-background img {
         display: none;
     }
 }
