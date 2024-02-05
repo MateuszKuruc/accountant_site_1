@@ -1,4 +1,7 @@
 ---
+import NavBar from '../components/NavBar.astro';
+import Footer from "../components/Footer.astro"
+
 interface Props {
 	title: string;
 }
@@ -21,7 +24,9 @@ const { title } = Astro.props;
         <!-- <link rel="preload" as="image" href="landing-m.webp"> -->
 	</head>
 	<body>
+        <NavBar />
 		<slot />
+        <Footer />
 	</body>
 </html>
 <style is:global>
@@ -115,7 +120,7 @@ body {
         border-radius: 0.25rem;
         transition: width 0.3s;
     }
-    #hero-330 .cs-button-solid:hover:before {
+.cs-button-solid:hover:before {
         width: 100%;
         background: #000;
     }
