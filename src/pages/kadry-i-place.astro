@@ -2,10 +2,13 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Banner from "../components/Banner.astro"
 import InteriorServices from "../components/InteriorServices.astro";
+import Sbs from "../components/Sbs.astro";
+import CTA from "../components/CTA.astro";
 ---
 
-<MainLayout title="Doradztwo podatkowe">
-    <Banner title="Doradztwo podatkowe" />
+<MainLayout title="Kadry i płace">
+    <Banner title="Kadry i płace" />
+
     <InteriorServices 
     topper="Kadry i płace"
     headerTitle="Nasze specjalizacje"
@@ -17,4 +20,25 @@ import InteriorServices from "../components/InteriorServices.astro";
     title3="Przygotowanie deklaracji podatkowych dot. wynagrodzeń"
     text3="Składanie deklaracji PIT-4, PIT-11, PIT-8 i innych, raportowanie i rozliczanie odliczeń podatkowych związanych z wynagrodzeniem, współpraca z pracownikami w zakresie podatków"
     />
+
+    <Sbs 
+    desc1
+    topper1
+    title1
+    text1
+
+    desc2
+    topper2
+    title2
+    text2
+
+    desc3
+    topper3
+    title3
+    text3
+    
+    />
+
+    <CTA />
+
 </MainLayout>
